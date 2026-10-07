@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hindsight</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><span class="glyph" aria-hidden="true"></span>Hindsight</div>
+  <nav id="nav">
+    <button data-view="review" class="on">Review</button>
+    <button data-view="learn">Teach a lesson</button>
+    <button data-view="lessons">Lessons <span id="lessonCount" class="count"></span></button>
+    <button data-view="settings">Settings</button>
+  </nav>
+  <p class="foot">Powered by Claude</p>
+</aside>
+<main>
+  <form id="repoBar" class="repobar">
+    <label for="repo">Repository</label>
+    <input id="repo" placeholder="owner/name" autocomplete="off" spellcheck="false">
+    <button type="submit" class="btn">Load</button>
+    <span id="repoStatus" class="muted"></span>
+  </form>
+  <div id="notice" class="notice" hidden></div>
+  <section id="view"></section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
